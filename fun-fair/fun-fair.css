@@ -1,0 +1,178 @@
+/*color variables*/
+:root {
+    --main-bg: darkslategrey;
+    --main-txt: #eee;
+    --button-bg: lightseagreen;
+    --border: gray;
+    --block-bg: gray;
+    --block-color-1: black; /*lightblue;*/
+    --block-color-1-hover: rgb(154, 190, 231);
+    --block-color-2: black;/*lightpink;*/
+    --block-color-2-hover: rgb(252, 156, 156);
+    --checked-txt: #eee;
+    --unchecked-txt: #4e4e4e;
+}
+
+body {
+    font-family:'Arial';
+    font-size: 16px;
+    padding:0;
+    margin:0;
+    background-color: var(--main-bg);
+    color: var(--main-txt);
+}
+main {
+    padding: 5px;
+}
+/*link txt color*/
+a { 
+    color: var(--main-txt);
+}
+
+/*corn maze*/
+/*found items number counter*/
+input {
+width: 50px;  
+background-color: inherit;  
+color: var(--main-txt);  
+padding:5;
+border: 1px inset var(--border);  
+    border-radius: 5px;   
+    margin: 5px;  
+    font-size: 15px;  
+}
+/*styles button that hides something on click*/
+.btn-hide{
+    padding:3px;
+    background-color:var(--button-bg);
+}
+/*hides the hide content by default*/
+#maze-path, #tutorial-text, #founditems, #fight-pokemon-info {
+    display:none; 
+    border:1px var(--border) solid;
+}
+/*gives the tutorial padding*/
+#tutorial-text {padding:10px;}
+/*corn maze path*/
+/*whole maze*/
+.contain-all-blocks {
+    border: 1px var(--border) solid;
+    overflow:hidden;
+    display:none;
+}
+/*creates scroll bars*/
+.scroll{
+    overflow-x: scroll; 
+    overflow-y: scroll; 
+    height: 600px; 
+    max-width: 1220px;
+    display: inline-block;
+    white-space: nowrap;
+}
+/*defines the block base*/
+.all-blocks {
+    width: 60px;
+    height:60px;
+    position:relative;
+    background:var(--block-bg);
+}
+   /* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/*position checkmarks inside block*/
+.up {left:20px;}
+.left {top:20px;}
+.right {top:20px; left:40px;}
+.down {top:40px; left:20px;}
+/* Create the different checkmarks*/
+.up:after {
+    content: "↑";
+    padding: 0px 0px 0px 6px;
+}
+.left:after {
+    content: "←";
+    padding: 0px 0px 0px 2px;
+}
+.right:after {
+    content: "→";
+    padding: 0px 0px 0px 2px;
+}
+.down:after {
+    content: "↓";
+    padding: 0px 0px 0px 6px;
+}
+/*block-color-1*/
+/* Create a custom checkbox */
+.block-color-1 {
+    color: var(--unchecked-txt);
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--block-color-1);
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .block-color-1 {
+    background-color: var(--block-color-1-hover);
+}
+/* When the checkbox is checked, change arrow color to white */
+.container input:checked ~ .block-color-1 {
+    background-color: var(--block-color-1);
+    color: var(--checked-txt); 
+}
+/* On mouse-over, add a grey background color */
+.container:hover input:checked ~ .block-color-1 {
+    background-color: var(--block-color-1-hover);
+}
+   
+/*block-color-2*/
+/* Create a custom checkbox */
+.block-color-2 {
+    color: var(--unchecked-txt);
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--block-color-2);
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .block-color-2 {
+    background-color: var(--block-color-2-hover);
+}
+/* When the checkbox is checked, change arrow color to white */
+.container input:checked ~ .block-color-2 {
+    background-color: var(--block-color-2);
+    color: var(--checked-txt); 
+}
+/* On mouse-over, add a grey background color */
+.container:hover input:checked ~ .block-color-2 {
+    background-color: var(--block-color-2-hover);
+}
+   
+/*block places by number & letter*/
+.exit {margin: 0px 0px 0px 540px;}
+
+.no1 {margin: 0px 0px 0px 0px;}
+.no2 {margin: -60px 0px 0px 60px;}
+.no3 {margin: -60px 0px 0px 120px;}
+.no4 {margin: -60px 0px 0px 180px;}
+.no5 {margin: -60px 0px 0px 240px;}
+.no6 {margin: -60px 0px 0px 300px;}
+.no7 {margin: -60px 0px 0px 360px;}
+.no8 {margin: -60px 0px 0px 420px;}
+.no9 {margin: -60px 0px 0px 480px;}
+.no10 {margin: -60px 0px 0px 540px;}
+   
+.no11 {margin: -60px 0px 0px 600px;}
+.no12 {margin: -60px 0px 0px 660px;}
+.no13 {margin: -60px 0px 0px 720px;}
+.no14 {margin: -60px 0px 0px 780px;}
+.no15 {margin: -60px 0px 0px 840px;}
+.no16 {margin: -60px 0px 0px 900px;}
+.no17 {margin: -60px 0px 0px 960px;}
+.no18 {margin: -60px 0px 0px 1020px;}
+.no19 {margin: -60px 0px 0px 1080px;}
+.no20 {margin: -60px 0px 0px 1140px;}
